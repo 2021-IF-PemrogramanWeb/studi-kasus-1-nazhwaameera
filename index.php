@@ -1,3 +1,6 @@
+<?php
+    require 'connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +17,11 @@
             <img src="images/dummy-logo.png" alt="Logo">
         </div>
         <div class="login-form">
-        <form>
+        <form action="login_add_save.php" method="post"
+            enctype="multipart/form-data">
             <div class="form-group">
-                <label for="user" class="form-label">User</label>
-                <input type="text" class="form-control" id="user" placeholder="Enter username">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter email">
             </div>
             <div class="form-group">
                 <label for="password" class="form-label">Password</label>
