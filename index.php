@@ -1,11 +1,11 @@
 <?php
-    // session_start();
-    // //jika user berusaha masuk tanpa login
-    // if( !isset($_SESSION["login"]) )
-    // {
-    //     header("Location: login.php"); //kembali ke halaman login
-    //     exit;
-    // }
+    session_start();
+    //jika user berusaha masuk tanpa login
+    if( !isset($_SESSION["login"]) )
+    {
+        header("Location: login.php"); //kembali ke halaman login
+        exit;
+    }
 
     $conn = mysqli_connect("localhost", "root", "", "housing1");
 
@@ -100,15 +100,15 @@
     <div class="container">
         <div class="button-group">
             <div class="button-item">
-                <a class="btn btn-dark" href="login.php" role="button">Generate Graph</a>
+                <a class="btn btn-dark" href="graph.php" role="button">Generate Graph</a>
                 <!-- <button type="button" class="btn btn-dark">Generate Graph</button> -->
             </div>
             <div class="button-item">
-                <a class="btn btn-dark" href="login.php" role="button">Generate PDF</a>
+                <a class="btn btn-dark" href="generateTablePDF.php" role="button">Generate PDF</a>
                 <!-- <button type="button" class="btn btn-dark">Generate PDF</button> -->
             </div>
             <div class="button-item">
-                <a class="btn btn-danger" href="login.php" role="button">Log Out</a>
+                <a class="btn btn-danger" href="logout.php" role="button">Log Out</a>
                 <!-- <button type="button" class="btn btn-danger" href="login.php">Log Out</button> -->
             </div>
         </div>

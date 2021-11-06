@@ -1,12 +1,12 @@
 <?php
-//session_start();
+session_start();
 
 //jika user udah login, tidak bisa kembali ke halaman login
-// if( isset($_SESSION["login"]) )
-// {
-//     header("Location: index.php"); //kembali ke halaman index
-//     exit;
-// }
+if( isset($_SESSION["login"]) )
+{
+    header("Location: index.php"); //kembali ke halaman index
+    exit;
+}
 
 $conn = mysqli_connect("localhost", "root", "", "housing1");
 
