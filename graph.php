@@ -7,7 +7,7 @@ if( !isset($_SESSION["login"]) )
     exit;
 }
 
-$conn = mysqli_connect("localhost", "root", "", "housing1");
+$conn = mysqli_connect("localhost", "root", "Bolaitubundar1", "housing1");
 
 $query = "SELECT * FROM sales_data"; //query
 $result = mysqli_query($conn, $query);

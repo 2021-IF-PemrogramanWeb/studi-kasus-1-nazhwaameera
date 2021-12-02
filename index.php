@@ -7,7 +7,7 @@
         exit;
     }
 
-    $conn = mysqli_connect("localhost", "root", "", "housing1");
+    $conn = mysqli_connect("localhost", "root", "Bolaitubundar1", "housing1");
 
     $query = "SELECT * FROM sales_data"; //query
     $result = mysqli_query($conn, $query);
@@ -17,16 +17,6 @@
     {
         $data[] = $row;
     }
-
-    //Mendapatkan id user
-    // $user_id = $_GET["id_user"];
-    // $result_user = mysqli_query($conn, "SELECT * FROM user WHERE id_user = $user_id");
-    // $user = [];
-
-    // while( $row = mysqli_fetch_assoc($result_user) )
-    // {
-    //     $user[] = $row;
-    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,7 +77,9 @@
                     alt=""
                     loading="lazy"
                 />
-                <strong class="d-none d-sm-block ms-1" style="color: white; display: flex; justify-content:center">tes@gmail.com</strong>
+                <strong class="d-none d-sm-block ms-1" style="color: white; display: flex; justify-content:center">
+                <?php echo $_SESSION['email']; ?>
+                </strong>
                 </div>
             </li>
         </ul>

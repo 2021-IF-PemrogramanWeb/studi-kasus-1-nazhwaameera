@@ -8,7 +8,7 @@ if( isset($_SESSION["login"]) )
     exit;
 }
 
-$conn = mysqli_connect("localhost", "root", "", "housing1");
+$conn = mysqli_connect("localhost", "root", "Bolaitubundar1", "housing1");
 
 //cek tombol submit ditekan
 if( isset($_POST["login"]) )
@@ -28,6 +28,9 @@ if( isset($_POST["login"]) )
         {
             //set session
             $_SESSION["login"] = true;
+
+            //set user email
+            $_SESSION['email'] = $email;
 
             header("Location: index.php"); //diarahkan ke index.php
             // echo('Login Berhasil');

@@ -21,7 +21,7 @@ function Header()
 }
 
 // Connect to database
-$link = mysqli_connect("localhost", "root", "", "housing1");
+$link = mysqli_connect("localhost", "root", "Bolaitubundar1", "housing1");
 
 $pdf = new PDF();
 $pdf->AddPage();
